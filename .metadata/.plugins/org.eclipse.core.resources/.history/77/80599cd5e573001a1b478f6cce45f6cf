@@ -1,0 +1,24 @@
+package com.taotao.rest.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.taotao.rest.service.ItemService;
+
+/** 
+* @description:商品信息controller
+* @author: hlv
+* @date：2020年4月1日 下午2:51:33 
+* 类说明 
+*/
+
+@Controller
+@RequestMapping("/item")
+public class ItemController {
+
+	@Autowired
+	private ItemService itemService;
+	
+	
+}

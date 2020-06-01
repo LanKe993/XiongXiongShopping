@@ -1,0 +1,24 @@
+package com.taotao.sso.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.taotao.common.pojo.TaotaoResult;
+import com.taotao.sso.service.UserService;
+
+/** 
+* @description:用户管理service
+* @author: hlv
+* @date：2020年4月7日 下午4:53:45 
+* 类说明 
+*/
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public TaotaoResult checkData(String content, String type) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

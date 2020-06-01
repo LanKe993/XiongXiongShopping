@@ -1,0 +1,29 @@
+package com.taotao.controller;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+import java.util.Timer;
+
+/** 
+* @author 作者 Your-Name: 
+* @version 创建时间：2019年10月22日 下午2:18:42 
+* 类说明 
+*/
+
+public class Outer{
+	void start(final int testTxt){
+		class TimerPrint implements ActionListener{
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				System.out.println(new Date() + "," + testTxt);
+			}
+			
+		}
+		
+		Timer t = new Timer(1000, new TimerPrint());
+		t.st
+	}
+}

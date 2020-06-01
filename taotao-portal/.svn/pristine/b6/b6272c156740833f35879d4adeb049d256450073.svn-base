@@ -1,0 +1,61 @@
+package com.taotao.portal.pojo;
+
+/**
+ * @description:
+ * @author: hlv
+ * @date：2020年4月11日 下午5:35:46 类说明
+ */
+
+public class CartItem {
+
+	private long id;
+
+	private String title;
+
+	private Integer number;
+
+	private long price;
+
+	private String image;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Integer getNumber() {
+		return number;
+	}
+
+	public void setNumber(Integer number) {
+		this.number = number;
+	}
+
+	public long getPrice() {
+		return price;
+	}
+
+	public void setPrice(long price) {
+		this.price = price;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+	
+}

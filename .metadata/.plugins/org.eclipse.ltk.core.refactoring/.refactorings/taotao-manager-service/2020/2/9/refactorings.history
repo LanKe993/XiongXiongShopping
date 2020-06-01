@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.taotao.service.TbContemtService.java&apos; to &apos;TbContentService.java&apos;&#x0D;&#x0A;- Original project: &apos;taotao-manager-service&apos;&#x0D;&#x0A;- Original element: &apos;com.taotao.service.TbContemtService.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.taotao.service.TbContentService.java&apos;" description="Rename compilation unit &apos;TbContemtService.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;com.taotao.service{TbContemtService.java" name="TbContentService.java" references="false" stamp="1582460941692" version="1.0"/>
+</session>

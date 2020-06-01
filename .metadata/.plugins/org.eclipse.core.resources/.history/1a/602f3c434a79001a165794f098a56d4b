@@ -1,0 +1,20 @@
+package com.taotao.sso.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.taotao.sso.service.UserService;
+
+/** 
+* @description:用户controller
+* @author: hlv
+* @date：2020年4月8日 上午11:36:07 
+* 类说明 
+*/
+
+@Controller
+public class UserController {
+
+	@Autowired
+	private UserService userService;
+}

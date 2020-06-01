@@ -1,0 +1,94 @@
+package com.taotao.jedis;
+
+import java.util.HashSet;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import redis.clients.jedis.HostAndPort;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisCluster;
+import redis.clients.jedis.JedisPool;
+
+/** 
+* @author 作者 Your-Name: 
+* @version 创建时间：2020年3月19日 下午10:33:47 
+* 类说明 
+*/
+
+
+public class JedisTest {
+
+	@Test
+	public void testJedisSingle() {
+		// 创建一个redis实例 
+		
+		Jedis jedis = new Jedis("47.106.108.42", 6379);
+		
+		// 调用jedis对象
+		jedis.set("test","jedis test");
+		String string = jedis.get("test");
+		System.out.println(string);
+		jedis.close();
+	}
+	
+	// jedis连接池
+	@Test
+	public void jedisPool() {
+		// 创建jedis连接池
+		JedisPool pool = new JedisPool("47.106.108.42", 6379);
+		// 从连接池中获得jedis对象
+		Jedis jedis = pool.getResource();
+		String string = jedis.get("test");
+		System.out.println(string);
+		pool.close();
+		jedis.close();
+	}
+	
+	/**
+	 * 集群版测试
+	 */
+	@Test
+	public void testJedisCluster() {
+		HashSet<HostAndPort> nodes = new HashSet<>();
+		nodes.add(new HostAndPort("47.106.108.42", 7001));
+		nodes.add(new HostAndPort("47.106.108.42", 7002));
+		nodes.add(new HostAndPort("47.106.108.42", 7003));
+		nodes.add(new HostAndPort("47.106.108.42", 7004));
+		nodes.add(new HostAndPort("47.106.108.42", 7005));
+		nodes.add(new HostAndPort("47.106.108.42", 7006));
+		
+		JedisCluster jedisCluster = new JedisCluster(nodes);
+		jedisCluster.set("key1", "1000");
+		String string = jedisCluster.get("key1");
+		System.out.println(string);
+		jedisCluster.close();
+	}
+	
+	/**
+	 * jedis单机版，测试和spring整合
+	 */
+	@Test
+	public void testSpringJedisSingle() {
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");
+		JedisPool jedisPool = (JedisPool) applicationContext.getBean("redisClient");
+		Jedis jedis = jedisPool.getResource();
+		String string = jedis.get("key1");
+		System.out.println(string);
+		jedis.close();
+		jedisPool.close();
+	}
+	
+	/**
+	 * jedis集群版，测试和spring整合
+	 */
+	@Test
+	public void testSpringJedisCluster() {
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");
+		JedisCluster jedisCluster = (JedisCluster) applicationContext.getBean("redisClient");
+		String string = jedisCluster.get("key1");
+		System.out.println(string);
+		jedisCluster.close();
+	}
+}

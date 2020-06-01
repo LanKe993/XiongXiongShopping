@@ -1,0 +1,27 @@
+package com.taotao.portal.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.taotao.common.utils.HttpClientUtil;
+import com.taotao.pojo.TbUser;
+import com.taotao.portal.service.UserService;
+
+/** 
+* @description:
+* @author: hlv
+* @date：2020年4月10日 下午9:34:08 
+* 类说明 
+*/
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public TbUser getUserDataByToken(String token) {
+		// 根据token取用户信息
+		HttpClientUtil.doGet(url)
+		return null;
+	}
+
+}

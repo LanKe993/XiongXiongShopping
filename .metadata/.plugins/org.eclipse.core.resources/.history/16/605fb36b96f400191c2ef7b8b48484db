@@ -1,0 +1,49 @@
+package com.taotao.controller;
+
+import junit.framework.Test;
+
+/** 
+* @author 作者 Your-Name: 
+* @version 创建时间：2019年10月22日 下午2:18:42 
+* 类说明 
+*/
+
+public class Outer {
+
+	// 定义一个实例变量和静态变量
+	private int a;
+	private static int b;
+	
+	// 定义一个静态方法和非静态方法
+	public static void say(){
+		
+	}
+	
+	public void test() {
+		
+	}
+	
+	// 内部类
+	public static class Inner {
+		// 在静态内部类中定义一个静态变量和一个实例变量
+		static int c;
+		int d;
+		// 定义一个匿名代码块和一个静态代码块
+		static{
+			
+		}
+		
+		// 定义一个静态方法和普通方法
+		public static void go(){
+			
+		}
+		
+		public void walk(){
+			// 在静态内部类中调用外部类的属性和方法
+			int f = b;// 可以直接调用外部类的静态属性
+			say();// 可以直接调用外部类的静态方法
+			int e = a;
+			test();
+		}
+	}
+}

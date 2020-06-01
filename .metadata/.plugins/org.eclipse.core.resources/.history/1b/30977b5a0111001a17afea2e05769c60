@@ -1,0 +1,22 @@
+package com.taotao.rest.service.impl;
+
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
+import com.taotao.rest.service.ItemCatService;
+
+/** 
+* @author 作者 Your-Name: 
+* @version 创建时间：2019年11月27日 下午6:33:07 
+* 类说明 
+*/
+
+public class ItemCatServiceImpl implements ItemCatService {
+
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

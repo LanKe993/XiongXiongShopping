@@ -1,0 +1,42 @@
+package com.taotao.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.taotao.common.pojo.TaotaoResult;
+import com.taotao.mapper.TbItemParamMapper;
+import com.taotao.pojo.TbItemParam;
+import com.taotao.pojo.TbItemParamExample;
+import com.taotao.pojo.TbItemParamExample.Criteria;
+import com.taotao.service.ItemParamService;
+
+/** 
+ * 商品的规格参数模板
+* @author 作者 Your-Name: 
+* @version 创建时间：2019年11月15日 下午6:11:15 
+* 类说明 
+*/
+
+@Service
+public class ItemParamServiceImpl implements ItemParamService {
+
+	@Autowired
+	private TbItemParamMapper ItemParamMapper;
+	
+	@Override
+	public TaotaoResult getItemParamByCid(long cid) {
+		TbItemParamExample example = new TbItemParamExample();
+		Criteria criteria = example.createCriteria();
+		criteria.andItemCatIdNotEqualTo(cid);
+		List<TbItemParam> list = ItemParamMapper.selectByExample(example);
+		// 判断是否查询到结果
+		if (list != null && list.size() > 0) {
+			return TaotaoResult.ok(list.get(0));
+		}
+		
+		return TaotaoResult.ok();
+	}
+
+}

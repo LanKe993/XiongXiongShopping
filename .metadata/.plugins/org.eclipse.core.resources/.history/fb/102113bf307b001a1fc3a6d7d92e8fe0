@@ -1,0 +1,27 @@
+package com.taotao.portal.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.taotao.pojo.TbUser;
+import com.taotao.portal.service.UserService;
+
+/** 
+* @description:
+* @author: hlv
+* @date：2020年4月10日 下午9:34:08 
+* 类说明 
+*/
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private 
+	@Override
+	public TbUser getUserDataByToken(String token) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

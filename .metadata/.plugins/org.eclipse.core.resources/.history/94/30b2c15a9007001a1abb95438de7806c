@@ -1,0 +1,22 @@
+package com.taotao.service.impl;
+
+import com.taotao.common.pojo.TaotaoResult;
+import com.taotao.service.ItemParamService;
+
+/** 
+ * 商品的规格参数模板
+* @author 作者 Your-Name: 
+* @version 创建时间：2019年11月15日 下午6:11:15 
+* 类说明 
+*/
+
+@service
+public class ItemParamServiceImpl implements ItemParamService {
+
+	@Override
+	public TaotaoResult getItemParamByCid(long cid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

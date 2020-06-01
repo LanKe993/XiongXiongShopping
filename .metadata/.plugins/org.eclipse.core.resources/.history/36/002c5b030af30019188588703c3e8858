@@ -1,0 +1,30 @@
+package com.taotao.controller;
+
+/** 
+* @author 作者 Your-Name: 
+* @version 创建时间：2019年10月20日 下午3:17:28 
+* 类说明 
+*/
+
+public class MyObject {
+
+	private static String str1 = "staticProperty";
+	
+	private String str2 = "property";
+	
+	public MyObject(){
+		
+	}
+	
+	public void print1(){
+		System.out.println(str1);
+		System.out.println(str2);
+		
+	}
+	
+	public static void print2(){
+		System.out.println(str1);
+		System.out.println(str2);
+		print1();
+	}
+}

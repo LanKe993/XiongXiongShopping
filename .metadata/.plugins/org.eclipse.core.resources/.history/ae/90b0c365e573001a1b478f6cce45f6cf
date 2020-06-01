@@ -1,0 +1,15 @@
+package com.taotao.rest.controller;
+
+import org.springframework.stereotype.Controller;
+
+/** 
+* @description:商品信息controller
+* @author: hlv
+* @date：2020年4月1日 下午2:51:33 
+* 类说明 
+*/
+
+@Controller
+public class ItemController {
+
+}

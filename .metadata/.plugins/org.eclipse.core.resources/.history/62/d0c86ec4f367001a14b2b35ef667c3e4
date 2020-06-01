@@ -1,0 +1,26 @@
+#FTP\u76f8\u5173\u914d\u7f6e
+#FTP\u7684ip\u5730\u5740
+#aliyun-lv
+#FTP_ADDRESS=47.106.108.42
+
+#huweiyun-lv  192.168.1.7
+#FTP_ADDRESS=139.159.210.111
+
+#vmware localhost PC
+FTP_ADDRESS=192.168.1.7
+
+FTP_PORT=21
+FTP_USERNAME=ftpuser
+FTP_PASSWORD=ftpuser
+FTP_BASE_PATH=/home/ftpuser/www/images
+
+#\u56fe\u7247\u670d\u52a1\u5668\u7684\u76f8\u5173\u914d\u7f6e
+#\u56fe\u7247\u670d\u52a1\u5668\u7684\u57fa\u7840url
+#aliyun-lv
+#IMAGE_BASE_URL=http://47.106.108.42/images
+
+#huaweiyun-lv
+#IMAGE_BASE_URL=http://139.159.210.111/images
+
+#vmware localhost PC
+IMAGE_BASE_URL=http://192.168.1.7/images
